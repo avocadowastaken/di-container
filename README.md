@@ -43,7 +43,7 @@ class UserRepo extends AbstractInjectableClass {
   }
 }
 
-app.use(req => {
+app.use((req) => {
   req.container = new Container();
   req.container.inject("db", db);
 });
@@ -51,7 +51,7 @@ app.use(req => {
 app.get("/users/:id", (req, res) => {
   const userRepo = req.container.resolveClass(UserRepo);
 
-  userRepo.getUser(req.params.id).then(user => {
+  userRepo.getUser(req.params.id).then((user) => {
     res.json(user);
   });
 });
@@ -60,12 +60,12 @@ app.put("/users/:id", (req, res) => {
   const db = req.container.resolveValue("db");
   const userRepo = req.container.resolveClass(UserRepo);
 
-  db.transaction(trx => {
+  db.transaction((trx) => {
     // Replace current db.
     req.container.inject("trx", trx);
 
     return userRepo.editUser(req.params.id, req.body);
-  }).then(user => {
+  }).then((user) => {
     res.json(user);
   });
 });
