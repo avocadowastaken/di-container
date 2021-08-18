@@ -10,9 +10,8 @@
     "pub": "pika-pack publish",
     "build": "pika-pack build --publish",
     "lint": "prettier . --check",
-    "test": "jest",
-    "cover": "jest --coverage",
-    "ci": "yarn lint && yarn tsc && yarn cover"
+    "test": "jest --coverage",
+    "ci": "yarn lint && yarn tsc && yarn test"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.4.0",
@@ -30,6 +29,7 @@
     "prettier-plugin-packagejson": "^2.2.11",
     "typescript": "^3.4.4"
   },
+
   "engines": {
     "node": ">=8.0.0"
   },
