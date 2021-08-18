@@ -29,7 +29,6 @@
     "prettier-plugin-packagejson": "^2.2.11",
     "typescript": "^3.4.4"
   },
-
   "engines": {
     "node": ">=8.0.0"
   },
