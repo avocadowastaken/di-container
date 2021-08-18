@@ -17,6 +17,6 @@ jobs:
       - uses: umidbekk/actions/npm/install@v1
       - run: yarn tsc
       - run: yarn lint
-      - run: yarn cover
+      - run: yarn test
       - uses: codecov/codecov-action@v2.0.2
       - run: yarn build
