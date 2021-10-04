@@ -10,8 +10,7 @@
     "pub": "pika-pack publish",
     "build": "pika-pack build --publish",
     "lint": "prettier . --check",
-    "test": "jest --coverage",
-    "ci": "yarn lint && yarn tsc && yarn test"
+    "test": "jest --coverage"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "7.14.5",
@@ -30,7 +29,8 @@
     "typescript": "4.4.3"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=12",
+    "npm": ">=7"
   },
   "@pika/pack": {
     "pipeline": [
